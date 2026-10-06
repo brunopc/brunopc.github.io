@@ -183,6 +183,36 @@ ul.menu li a.current {
   background: #2c2c2c;
 }
 
+/* ---------- Sub menu (publications) ---------- */
+
+#submenu {
+  background: #ffffff;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed var(--site-red);
+}
+
+ul.submenu {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  font-size: .9em;
+  margin: 0;
+  padding: 8px 0 0 15px;
+}
+
+ul.submenu li {
+  margin: 0 18px 0 0;
+  padding: 0;
+}
+
+ul.submenu li a {
+  color: var(--site-red);
+}
+
+ul.submenu li a.current {
+  font-weight: bold;
+}
+
 /* ---------- Main column ---------- */
 
 #Column {
