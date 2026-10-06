@@ -16,6 +16,10 @@
   font-display: swap;
 }
 
+:root {
+  --site-red: #a30000;    /* LaTeX myred; old colour: #cc0000 */
+}
+
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
@@ -31,7 +35,7 @@ body {
 }
 
 a {
-  color: #cc0000;
+  color: var(--site-red);
   text-decoration: none;
 }
 
@@ -157,7 +161,7 @@ ul.menu {
   flex-wrap: wrap;
   list-style-type: none;
   font-size: .9em;
-  border-bottom: 3px solid #cc0000;
+  border-bottom: 3px solid var(--site-red);
   margin: 0;
   padding: 0;
 }
@@ -242,7 +246,7 @@ ul.menu li a.current {
   padding-bottom: 5px;
   padding-left: 20px;
   margin: 0 0 0 151px;
-  border-left: 1px dashed #cc0000;
+  border-left: 1px dashed var(--site-red);
   background-color: #ffffff;
 }
 
@@ -257,11 +261,132 @@ ul.menu li a.current {
   padding-left: 4px;
 }
 
+/* ---------- Fellowship page ---------- */
+
+#container h2.fellowship-title {
+  font-size: 1.5em;
+  font-family: 'EB Garamond SemiBold', 'EB Garamond', times, serif;
+  font-weight: normal;
+  padding: 15px 0 0 0;
+  text-align: center;
+}
+
+#container p.fellowship-subtitle {
+  padding-top: 2px;
+  max-width: none;
+  text-align: center;
+  color: #555555;
+  font-size: 1.05em;
+}
+
+.stackrel {
+  position: relative;
+  display: inline-block;
+}
+
+.stackrel::before {
+  content: "?";
+  position: absolute;
+  left: 50%;
+  top: -0.7em;
+  transform: translateX(-50%);
+  font-size: 0.65em;
+}
+
+.fellowship em,
+.fellowship i {
+  font-style: italic;
+}
+
+.fellowship b {
+  font-weight: bold;
+}
+
+.fellowship sup,
+.fellowship sub {
+  font-size: 0.75em;
+  line-height: 0;
+  position: relative;
+}
+
+.fellowship sup {
+  top: -0.45em;
+}
+
+.fellowship sub {
+  top: 0.25em;
+}
+
+.circuit-figure {
+  float: right;
+  width: 260px;
+  max-width: 100%;
+  margin: 0 0 10px 20px;
+  font-size: 0.9em;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.circuit-figure .output-gate {
+  stroke: var(--site-red);
+}
+
+.circuit-figure .output-gate-label {
+  fill: var(--site-red);
+}
+
+.circuit-figure svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  color: #000000;
+}
+
+.circuit-figure figcaption {
+  padding: 5px 10px 0 10px;
+}
+
+#container ol.objectives {
+  list-style-type: upper-roman;
+  max-width: 570px;
+  margin-left: 40px;
+}
+
+#container ol.objectives li {
+  line-height: 1.4;
+  margin: 0 0 8px 0;
+  padding-left: 6px;
+}
+
+#Column h3.fellowship-refs-title {
+  clear: both;
+  padding: 15px 0 0 0;
+}
+
+#container ol.fellowship-refs {
+  font-size: 0.9em;
+  max-width: 583px;
+}
+
+#container ol.fellowship-pubs {
+  font-size: 1em;
+  max-width: none;
+}
+
+#container ol.fellowship-refs {
+  text-align: left;
+}
+
+#container ol.fellowship-refs li {
+  line-height: 1.4;
+  margin: 0 0 6px 0;
+}
+
 /* ---------- Footer ---------- */
 
 #footer {
   height: 20px;
-  border-bottom: 3px solid #cc0000;
+  border-bottom: 3px solid var(--site-red);
 }
 
 /* ---------- Small screens ---------- */
@@ -320,7 +445,7 @@ ul.menu li a.current {
     float: none;
     width: auto;
     margin: 0 16px;
-    border-bottom: 1px dashed #cc0000;
+    border-bottom: 1px dashed var(--site-red);
   }
 
   #leftColumn h2 {
@@ -340,4 +465,67 @@ ul.menu li a.current {
   #footer {
     margin: 0 16px;
   }
+}
+
+@media (max-width: 640px) {
+  .circuit-figure {
+    float: none;
+    margin: 0 auto 10px auto;
+  }
+
+}
+
+.simple-explanation {
+  max-width: 579px;
+  margin: 4px 0 0 0;
+  line-height: 1.4;
+}
+
+.simple-explanation summary {
+  cursor: pointer;
+  font-weight: bold;
+  width: fit-content;
+}
+
+.simple-explanation summary:hover {
+  color: #555555;
+}
+
+.simple-explanation div {
+  padding: 2px 0 0 0;
+}
+
+.cite {
+  position: relative;
+  color: var(--site-red);
+  cursor: pointer;
+}
+
+.cite:focus {
+  outline: none;
+}
+
+.cite-popup {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  left: -8em;
+  width: 22em;
+  max-width: 80vw;
+  padding: 8px 10px;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  color: #000000;
+  font-size: 0.9em;
+  line-height: 1.4;
+  text-align: left;
+  cursor: auto;
+}
+
+.cite:hover .cite-popup,
+.cite:focus .cite-popup,
+.cite:focus-within .cite-popup {
+  display: block;
 }

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" href="styles/reset.css" />
+<link rel="stylesheet" type="text/css" href="styles/style.css" />
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<title>Bruno Pasqualotto Cavalar</title>
+<script data-goatcounter="https://brunopc.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+<div id="container" class="clearfix">
+<div id="header">
+<!-- <a href="index.html"> -->
+<h1>
+Bruno Pasqualotto Cavalar
+</h1>
+<!-- </a> -->
+</div>
+<div id="menu">
+<ul class="menu">
+<li><a href="index.html">home</a></li>
+<li><a href="publications.html">publications</a></li>
+<li><a href="teaching.html">teaching</a></li>
+<li><a href="material.html">other material</a></li>
+<li><a href="fellowship.html" class="current">fellowship</a></li>
+</ul>
+</div>
+<div id="Column" class="fellowship">
+<h2 class="fellowship-title">Algorithmic Proofs of Algorithmic Impossibility</h2>
+<p class="fellowship-subtitle"><a href="https://gtr.ukri.org/projects?ref=UKRI3441">EPSRC Fellowship</a> (2026&ndash;2029)</p>
+
+<p>
+The
+P&nbsp;<span class="stackrel">=</span>&nbsp;NP
+problem asks whether every computational problem for which a solution can
+be efficiently verified can also be efficiently solved.
+Counted among the 7 Clay Millennium Prize Problems,
+it is one of the most influential unsolved problems of mathematics,
+with implications for biology, cryptography, and many other fields.
+At heart, this question is concerned with the inherent mathematical
+limits of computational devices.
+</p>
+
+<figure class="circuit-figure">
+<svg viewBox="0 0 245 155" role="img" aria-labelledby="circuit-caption">
+  <defs>
+    <marker id="arrow" viewBox="-5 -5 10 10" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M -3 -4 L 1.5 0 L -3 4" fill="none" stroke="currentColor" stroke-width="1.4" />
+    </marker>
+  </defs>
+  <g stroke="currentColor" stroke-width="1.6" fill="none" marker-mid="url(#arrow)">
+    <polyline points="25,132 40,106 55,80" />
+    <polyline points="55,80 70,54 85,28" />
+    <polyline points="115,80 100,54 85,28" />
+    <polyline points="85,132 100,106 115,80" />
+    <polyline points="145,132 130,106 115,80" />
+  </g>
+  <g stroke-width="1.6" fill="#ffffff">
+    <circle class="output-gate" cx="85" cy="28" r="14" />
+    <circle cx="55" cy="80" r="14" stroke="currentColor" />
+    <circle cx="115" cy="80" r="14" stroke="currentColor" />
+    <circle cx="25" cy="132" r="14" stroke="currentColor" />
+    <circle cx="85" cy="132" r="14" stroke="currentColor" />
+    <circle cx="145" cy="132" r="14" stroke="currentColor" />
+  </g>
+  <g fill="currentColor" font-size="15" text-anchor="middle" dominant-baseline="central" font-family="'EB Garamond', serif">
+    <text class="output-gate-label" x="85" y="28">&#8743;</text>
+    <text x="55" y="80">&#172;</text>
+    <text x="115" y="80">&#8744;</text>
+    <text x="25" y="132" font-style="italic">x<tspan font-size="10" dy="4">1</tspan></text>
+    <text x="85" y="132" font-style="italic">x<tspan font-size="10" dy="4">2</tspan></text>
+    <text x="145" y="132" font-style="italic">x<tspan font-size="10" dy="4">3</tspan></text>
+  </g>
+  <g fill="currentColor" font-size="12" text-anchor="start" dominant-baseline="central">
+    <text x="175" y="28">Output gate</text>
+    <text x="175" y="80">Gates</text>
+    <text x="175" y="132">Inputs</text>
+  </g>
+</svg>
+<figcaption id="circuit-caption">
+Boolean circuit computing the Boolean function
+<i>f</i>&nbsp;:&nbsp;{0,1}<sup>3</sup>&nbsp;&rarr;&nbsp;{0,1}
+such that
+<i>f</i>(<i>x</i><sub>1</sub>,<i>x</i><sub>2</sub>,<i>x</i><sub>3</sub>)
+=
+&not;<i>x</i><sub>1</sub>&nbsp;&and;&nbsp;(<i>x</i><sub>2</sub>&nbsp;&or;&nbsp;<i>x</i><sub>3</sub>).
+</figcaption>
+</figure>
+
+<p>
+Circuits model computation as a sequence of simple, local steps,
+called <em>gates</em>,
+and the efficiency of the circuit is measured by its
+<em>size</em> (number of gates).
+One of the most promising approaches to solve the P vs NP problem is via
+<em>circuit lower bounds</em>,
+a <em>proof of impossibility</em> which shows that
+no circuit of small size can solve a concrete problem of interest.
+A sufficiently strong circuit lower bound is enough to conclude that
+P&nbsp;&ne;&nbsp;NP, thus solving the question.
+</p>
+
+<p>
+Most of the success in the investigation of circuits has been on restricted
+circuit models.
+Such models provide a precise mathematical formalism of specific types of
+algorithms, allowing us to investigate their power and limitations
+en-route to understanding computation at large.
+Over the years, this study has unveiled a beautiful synergy between
+circuits, mathematics, and algorithms.
+First, many proofs of circuit lower bounds have both drawn from and
+contributed to extremal and probabilistic combinatorics,
+with insights from lower bounds proving useful in
+recent breakthroughs in combinatorics
+[<span class="cite" tabindex="0">i<span class="cite-popup">
+Ryan Alweiss, Shachar Lovett, Kewen Wu, and Jiapeng Zhang.
+<a href="https://doi.org/10.4007/annals.2021.194.3.5">Improved bounds for the sunflower lemma</a>.
+<i>Annals of Mathematics</i>, 2021.
+</span></span>].
+Second, such combinatorial proofs of circuit lower bounds
+could often be transformed into impactful algorithms, such as
+cryptographic attacks and learning algorithms
+[<span class="cite" tabindex="0">ii<span class="cite-popup">
+Marco L. Carmosino, Russell Impagliazzo, Valentine Kabanets, and Antonina Kolokolova.
+<a href="https://doi.org/10.4230/LIPIcs.CCC.2016.10">Learning algorithms from natural proofs</a>.
+<i>CCC</i>, 2016.
+</span></span>].
+Finally, algorithms themselves have been employed to obtain new circuit
+lower bounds
+[<span class="cite" tabindex="0">iii<span class="cite-popup">
+Ryan Williams.
+<a href="https://doi.org/10.1145/2559903">Nonuniform ACC circuit lower bounds</a>.
+<i>Journal of the ACM</i>, 2014.
+</span></span>].
+</p>
+
+<p>
+The project will exploit and strengthen those connections
+to obtain new circuit lower bounds
+and new algorithmic consequences of lower bounds.
+The project will also develop those connections in the context of 
+<em>quantum computing</em>,
+helping to shape a theory of 
+<em>quantum meta-complexity</em>.
+</p>
+
+<!-- <ol class="objectives"> -->
+<!--     <li> -->
+<!--         <b>Circuit lower bounds:</b> -->
+<!--         To develop methods based on combinatorics and discrete analysis -->
+<!--         to solve longstanding open questions in circuit complexity. -->
+<!--     </li> -->
+<!--     <li> -->
+<!--         <b>Algorithms from lower bounds:</b> -->
+<!--         To strengthen the <em>algorithmic consequences of proofs of lower -->
+<!--         bounds</em>, applying new combinatorial constructions. -->
+<!--     </li> -->
+<!--     <li> -->
+<!--         <b>A theory of quantum meta-complexity:</b> -->
+<!--         To develop the above synergies in the context of  -->
+<!--         <em>quantum computing</em>. -->
+<!--     </li> -->
+<!-- </ol> -->
+
+<h3 class="fellowship-refs-title">Supported publications</h3>
+<ol class="fellowship-refs fellowship-pubs">
+    <li>
+        Bruno P. Cavalar, Théo Fabris, Partha Mukhopadhyay, Srikanth Srinivasan, and Amir Yehudayoff.
+        <br/>
+        <a href="https://eccc.weizmann.ac.il/report/2026/220/">Derandomized sunflowers and radical lower bounds</a>.
+        <i>FOCS</i>, 2026.
+        <details class="simple-explanation">
+            <summary>Simple explanation</summary>
+            <div>
+            We construct explicit polynomials that can be computed efficiently
+            using additions, subtractions and multiplications, but such that
+            computing any of their powers without subtractions requires an
+            exponential number of gates.
+            <!-- To prove this, we show that &ldquo;spread&rdquo; hypergraphs contain -->
+            <!-- a monochromatic hyperedge with high probability when coloured by a -->
+            <!-- sufficiently &ldquo;pseudorandom&rdquo; colouring. -->
+            </div>
+        </details>
+    </li>
+    <li>
+        Bruno P. Cavalar, Matthew Gray, Susanna de Rezende, and Rahul Santhanam.
+        <br/>
+        <a href="https://eccc.weizmann.ac.il/report/2026/128/">ETH-hardness of learning monotone circuits and approximating their size</a>.
+        <i>CCC</i>, 2026.
+        <details class="simple-explanation">
+            <summary>Simple explanation</summary>
+            <div>
+            We show that there are certain tasks that no computer can &ldquo;learn&rdquo; efficiently,
+            assuming well-established complexity-theoretic hypotheses.
+            Our proof brings a novel connection between automatability,
+            lifting theorems and circuit learning.
+            </div>
+        </details>
+    </li>
+    <li>
+        Bruno P. Cavalar, Mika Göös, Artur Riazanov, Anastasia Sofronova, and Dmitry Sokolov.
+        <br/>
+        <a href="https://eccc.weizmann.ac.il/report/2025/102/">Monotone circuit complexity of matching</a>.
+        <i>STOC</i>, 2026.
+        <details class="simple-explanation">
+            <summary>Simple explanation</summary>
+            <div>
+            We show that Boolean circuits without negations (monotone circuits)
+            deciding if a graph has a &ldquo;perfect matching&rdquo; 
+            must have exponential size, settling a 40-year-old question.
+            Our work also
+            separates constant-depth and monotone circuits, solving an open question from the
+            90s.
+            </div>
+        </details>
+    </li>
+    <li>
+        Bruno P. Cavalar, Eli Goldin, Matthew Gray, Taiga Hiroka, and Tomoyuki Morimae.
+        <br/>
+        <a href="https://arxiv.org/abs/2510.05028">Cryptographic conditions for efficient testing of distributions and quantum states</a>.
+        <i>Preprint</i>.
+        <details class="simple-explanation">
+            <summary>Simple explanation</summary>
+            <div>
+            We study what cryptographic conditions make
+            &ldquo;distribution verification&rdquo; (i.e., checking if an unknown distribution is close to a known one) possible.
+            As an application of our techniques, 
+            we give a procedure for classical
+            computers to verify,
+            with only a polynomial number of samples, whether a quantum computer is
+            sampling from a distribution that classical computers cannot.
+            </div>
+        </details>
+    </li>
+</ol>
+
+</div>
+
+<script>
+// Keep citation popups inside the window.
+document.querySelectorAll('.cite').forEach(function (cite) {
+    var popup = cite.querySelector('.cite-popup');
+    function place() {
+        popup.style.left = '';
+        popup.style.display = 'block';
+        var r = popup.getBoundingClientRect();
+        var left = popup.offsetLeft;
+        popup.style.display = '';
+        var width = document.documentElement.clientWidth;
+        var shift = 0;
+        if (r.right > width - 8) shift = width - 8 - r.right;
+        if (r.left + shift < 8) shift = 8 - r.left;
+        if (shift) popup.style.left = (left + shift) + 'px';
+    }
+    cite.addEventListener('mouseenter', place);
+    cite.addEventListener('focus', place);
+});
+</script>
+
+<div id="footer">
+<!-- <h1>Bruno Pasqualotto Cavalar - 2012-2014</h1> -->
+</div>
+
+</div>
+</body>
+</html>
