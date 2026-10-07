@@ -209,6 +209,7 @@ ul.submenu li a {
   color: var(--site-red);
 }
 
+ul.submenu li a:hover,
 ul.submenu li a.current {
   font-weight: bold;
 }
